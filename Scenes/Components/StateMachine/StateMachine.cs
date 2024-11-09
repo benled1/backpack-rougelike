@@ -1,6 +1,4 @@
 using Godot;
-using System;
-using System.ComponentModel;
 
 public partial class StateMachine : Node
 {
@@ -12,8 +10,9 @@ public partial class StateMachine : Node
     {
         foreach (State child_state in this.GetChildren())
         {
-            child_state.parent = parent;
+            child_state.controlledEntity = parent;
         }
+        this.changeState(startingState);
     }
 
     public void changeState(State newState)
@@ -25,6 +24,10 @@ public partial class StateMachine : Node
         this.currentState = newState;
         this.currentState.onEnter();
     }
-    public void Process() {}
+
+    public void Process() 
+    {
+        this.currentState.stateProcess();
+    }
 
 }

@@ -3,13 +3,12 @@ using Godot;
 
 
 
-public partial class State: Node
+public abstract partial class State: Node
 {
-    public Node2D parent;
-
-    public void onEnter() {}
-    public void onExit() {}
-    public void Process() {}
+    public virtual Node2D controlledEntity {get; set;}
+    public abstract void onEnter();
+    public abstract void onExit();
+    public abstract void stateProcess();
 }
 
 
