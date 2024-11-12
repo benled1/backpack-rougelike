@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhefus4nc17tt"]
+
+[ext_resource type="PackedScene" uid="uid://cq8127tpf5pgv" path="res://Scenes/Environment/TestMap1/test_map_1.tscn" id="1_rtsj2"]
+[ext_resource type="PackedScene" uid="uid://dc7qg1kxpit6h" path="res://Scenes/Entities/Player/Player.tscn" id="2_rvek7"]
+
+[node name="PlayTestTestMap1" type="Node2D"]
+
+[node name="TestMap1" parent="." instance=ExtResource("1_rtsj2")]
+position = Vector2(400, 200)
+
+[node name="Player" parent="." instance=ExtResource("2_rvek7")]
+moveSpeed = 500.0

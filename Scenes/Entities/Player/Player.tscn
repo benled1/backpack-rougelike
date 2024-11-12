@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://Scenes/Entities/Player/States/Walking.cs" id="4_boyik"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smub4"]
+radius = 18.0
+height = 120.0
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("stateMachine")]
 script = ExtResource("1_4ibm5")
@@ -21,9 +23,12 @@ script = ExtResource("3_x5pk4")
 [node name="Walking" type="Node" parent="StateMachine"]
 script = ExtResource("4_boyik")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="EnvironmentCollider" type="CollisionShape2D" parent="."]
+top_level = true
 shape = SubResource("CapsuleShape2D_smub4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(522, 231)
+scale = Vector2(0.34, 0.971)
 texture = ExtResource("2_ugqj4")
+
+[node name="Camera2D" type="Camera2D" parent="."]

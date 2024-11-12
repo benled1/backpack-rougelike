@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq8127tpf5pgv"]
+
+[ext_resource type="Texture2D" uid="uid://boltp5bfx2pyk" path="res://Assets/Textures/1000_F_407541294_A8o5pW1SPNBIENxt6Jsttpw5o2NsIWRJ.jpg" id="1_3g8cu"]
+[ext_resource type="PackedScene" uid="uid://byxlotrqncj8u" path="res://Scenes/Environment/Objects/TestWall.tscn" id="1_ny3lv"]
+
+[node name="TestMap1" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(446.5, 288.5)
+scale = Vector2(3.415, 2.493)
+texture = ExtResource("1_3g8cu")
+
+[node name="WallTop" parent="." instance=ExtResource("1_ny3lv")]
+position = Vector2(550, -840)
+scale = Vector2(2.5, 1)
+
+[node name="WallBottom" parent="." instance=ExtResource("1_ny3lv")]
+position = Vector2(550, 1470)
+scale = Vector2(2.5, 1)
+
+[node name="WallLeft" parent="." instance=ExtResource("1_ny3lv")]
+position = Vector2(-890, 320)
+rotation = 1.5708
+scale = Vector2(2, 1)
+
+[node name="WallRight" parent="." instance=ExtResource("1_ny3lv")]
+position = Vector2(1990, 320)
+rotation = 1.5708
+scale = Vector2(2, 1)

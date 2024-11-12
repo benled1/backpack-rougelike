@@ -6,6 +6,7 @@ public partial class Player : CharacterBody2D
 {
     [Export]
     public StateMachine stateMachine;
+    [Export]
     public float moveSpeed = 100.0f;
     
     public override void _Ready() 
@@ -14,6 +15,7 @@ public partial class Player : CharacterBody2D
     }
     public override void _Process(double delta)
     {
+        this.stateMachine.currentState.stateProcess();
         Vector2 inputDirection  = Input.GetVector("move_left", "move_right", "move_up", "move_down");
         this.Velocity = inputDirection * moveSpeed;
         MoveAndSlide();

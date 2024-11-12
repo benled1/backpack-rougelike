@@ -36,11 +36,11 @@ public partial class Idle : State
 
     public override void stateProcess()
     {
-        if (this.controlledEntity.)
+        if (this._player.Velocity != Vector2.Zero)
         {
-
+            this._player.stateMachine.changeState("Walking");
         }
-        Debug.Print("Running stateProcess on Idle state...");
+        Debug.Print("Current state = Idle...");
     }
 
 }

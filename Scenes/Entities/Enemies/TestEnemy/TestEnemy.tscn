@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dosab5byfixqc"]
+
+[node name="TestEnemy" type="CharacterBody2D"]
